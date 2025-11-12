@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Винная Коллекция - Изучение Вин</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">🍷 Wine</span>
+                <span class="logo-subtitle">Collection</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Главная</a>
+                <a href="#wines" class="nav-link">Вина</a>
+                <a href="#about" class="nav-link">О проекте</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Откройте для себя</span>
+                <span class="title-line">мир белых вин</span>
+            </h1>
+            <p class="hero-subtitle">Коллекция изысканных белых вин со всего мира</p>
+            <button class="cta-button" onclick="scrollToWines()">
+                <span>Исследовать вина</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- Фильтры и поиск -->
+    <section id="wines" class="wines-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Коллекция вин</h2>
+                <p class="section-subtitle">Выберите вино для изучения</p>
+            </div>
+
+            <!-- Фильтры -->
+            <div class="filters-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Поиск по названию..." class="search-input">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                
+                <div class="filters">
+                    <select id="countryFilter" class="filter-select">
+                        <option value="">Все страны</option>
+                    </select>
+                    <select id="varietyFilter" class="filter-select">
+                        <option value="">Все сорта</option>
+                    </select>
+                    <select id="sweetnessFilter" class="filter-select">
+                        <option value="">Все типы</option>
+                        <option value="Сухое">Сухое</option>
+                        <option value="Полусладкое">Полусладкое</option>
+                        <option value="Feinherb">Feinherb</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Счетчик результатов -->
+            <div class="results-count">
+                <span id="resultsCount">0</span> вин найдено
+            </div>
+
+            <!-- Сетка вин -->
+            <div id="winesGrid" class="wines-grid">
+                <!-- Вина будут загружены через JavaScript -->
+            </div>
+
+            <!-- Модальное окно для деталей вина -->
+            <div id="wineModal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div id="modalBody" class="modal-body">
+                        <!-- Детали вина будут загружены через JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О проекте -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">О проекте</h2>
+            <p class="about-text">
+                Этот сайт создан для изучения и знакомства с различными видами белых вин со всего мира. 
+                Здесь вы найдете подробную информацию о каждом вине: его происхождении, сортах винограда, 
+                вкусовых характеристиках и рекомендуемых сочетаниях с блюдами.
+            </p>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Wine Collection. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
