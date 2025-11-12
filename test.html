@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовая страница - Винная Коллекция</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .test-container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .test-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #2c1810;
+        }
+
+        .test-subtitle {
+            font-size: 1.2rem;
+            color: #6b5b4f;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .test-card {
+            background: #faf8f5;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid #e8e0d8;
+            transition: all 0.3s ease;
+        }
+
+        .test-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .test-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c1810;
+        }
+
+        .test-card p {
+            color: #6b5b4f;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .test-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #2c1810;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .test-button:hover {
+            background: #8b4513;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .test-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .test-feature {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 2px solid #e8e0d8;
+        }
+
+        .test-feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .test-feature h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #2c1810;
+        }
+
+        .test-feature p {
+            font-size: 0.9rem;
+            color: #6b5b4f;
+        }
+
+        .test-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #4ade80;
+            color: white;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .test-container {
+                padding: 2rem;
+            }
+
+            .test-title {
+                font-size: 2rem;
+            }
+
+            .test-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-status">✓ Проект готов к тестированию</div>
+        <h1 class="test-title">🍷 Винная Коллекция</h1>
+        <p class="test-subtitle">
+            Информативный сайт для изучения белых вин со всего мира.<br>
+            Современный 3D минималистичный дизайн с плавными анимациями.
+        </p>
+
+        <div class="test-card">
+            <h3>📋 Основные функции</h3>
+            <p>
+                • Коллекция из 27 белых вин<br>
+                • Поиск и фильтрация по странам, сортам, типам<br>
+                • Детальная информация о каждом вине<br>
+                • 3D эффекты и плавные анимации<br>
+                • Адаптивный дизайн для всех устройств
+            </p>
+            <a href="index.html" class="test-button">Открыть сайт</a>
+        </div>
+
+        <div class="test-features">
+            <div class="test-feature">
+                <div class="test-feature-icon">🎨</div>
+                <h4>3D Дизайн</h4>
+                <p>Минималистичный современный дизайн с 3D эффектами</p>
+            </div>
+            <div class="test-feature">
+                <div class="test-feature-icon">✨</div>
+                <h4>Анимации</h4>
+                <p>Плавные красивые анимации с использованием GSAP</p>
+            </div>
+            <div class="test-feature">
+                <div class="test-feature-icon">🔍</div>
+                <h4>Поиск</h4>
+                <p>Быстрый поиск и фильтрация вин</p>
+            </div>
+            <div class="test-feature">
+                <div class="test-feature-icon">📱</div>
+                <h4>Адаптивность</h4>
+                <p>Отлично работает на всех устройствах</p>
+            </div>
+        </div>
+
+        <div class="test-card">
+            <h3>🚀 Технологии</h3>
+            <p>
+                <strong>HTML5</strong> - структура сайта<br>
+                <strong>CSS3</strong> - стили и 3D эффекты<br>
+                <strong>JavaScript</strong> - функциональность<br>
+                <strong>GSAP</strong> - плавные анимации<br>
+                <strong>JSON</strong> - данные о винах
+            </p>
+        </div>
+
+        <div class="test-card">
+            <h3>📝 Использование</h3>
+            <p>
+                1. Откройте <strong>index.html</strong> в браузере<br>
+                2. Используйте поиск для поиска вин<br>
+                3. Фильтруйте по странам, сортам, типам<br>
+                4. Кликните на карточку вина для детальной информации<br>
+                5. Наслаждайтесь плавными анимациями!
+            </p>
+            <a href="index.html" class="test-button">Начать использование</a>
+        </div>
+
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid #e8e0d8;">
+            <p style="color: #6b5b4f; font-size: 0.9rem;">
+                💡 <strong>Совет:</strong> Убедитесь, что файл <strong>wines.json</strong> находится в той же папке, что и <strong>index.html</strong>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
