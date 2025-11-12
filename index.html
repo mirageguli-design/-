@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Elegance Wines - Роскошные вина</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Elegance Wines</div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="button-hover">Главная</a></li>
+                <li><a href="#wines" class="button-hover">Вина</a></li>
+                <li><a href="#about" class="button-hover">О нас</a></li>
+                <li><a href="#contact" class="button-hover">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero scroll-animation">
+            <div class="hero-content">
+                <h1>Изысканность в каждой капле</h1>
+                <p>Откройте для себя мир премиальных вин с неповторимым вкусом и ароматом</p>
+                <button class="cta-button">Начать путешествие</button>
+            </div>
+            <div class="hero-3d-container">
+                <div class="wine-bottle-3d"></div>
+            </div>
+        </section>
+
+        <section id="wines" class="wines-section scroll-animation">
+            <h2>Наши вина</h2>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="type-filter">Тип вина:</label>
+                    <select id="type-filter" class="filter-select">
+                        <option value="">Все типы</option>
+                        <option value="Красное вино">Красное вино</option>
+                        <option value="Белое вино">Белое вино</option>
+                        <option value="Игристое вино">Игристое вино</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="country-filter">Страна:</label>
+                    <select id="country-filter" class="filter-select">
+                        <option value="">Все страны</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sweetness-filter">Сладость:</label>
+                    <select id="sweetness-filter" class="filter-select">
+                        <option value="">Все виды</option>
+                        <option value="Сухое">Сухое</option>
+                        <option value="Полусладкое">Полусладкое</option>
+                        <option value="Сладкое">Сладкое</option>
+                    </select>
+                </div>
+            </div>
+            <div class="wines-grid" id="wines-grid">
+                <!-- Вина будут загружаться динамически -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section scroll-animation">
+            <h2>О нас</h2>
+            <p>Мы - команда энтузиастов, посвятивших себя отбору лучших вин со всего мира. Каждое вино в нашей коллекции проходит строгий отбор, чтобы достичь совершенства вкуса и качества.</p>
+        </section>
+
+        <section id="contact" class="contact-section scroll-animation">
+            <h2>Контакты</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваш email" required>
+                <textarea placeholder="Сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Elegance Wines. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
